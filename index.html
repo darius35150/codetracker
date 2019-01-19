@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>Code Tracker</title>
+    </head>
+    <body>
+        <!--This form is for adding a new contact-->
+        <div id="addModal" class="modal">
+            <div class="addDiv" id="addDiv" >
+                <span class="addClose">x</span>
+                <div class="addTitle">
+                    <p><b>Add Contacts</b></p>
+                </div>
+                <form id="addForm" action="index.php" method="post">
+                    <input type="hidden" id="value"name="value"/> <!--hidden input for verification of adding contact-->
+                    <br/>
+                    <br/>
+                    <div class="buttons">
+                        <input  type="submit" value="Submit" name="add" class="submitButtons" onclick="confirming()"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br/>
+        <br/>
+                    
+        <!--This form is for the delete section of the web app.-->
+        <div id="deleteModal" class="modal">
+            <div class="deleteDiv">
+                <span class="deleteClose">x</span>
+                <div class="deleteTitle">
+                    <p><b>Delete</b></p>
+                </div>
+            <form id="deleteForm" action="index.php" method="post">
+                <br/>
+                <br/>
+                <div class="buttons2">
+                    <input type="submit" value="Submit" name="delete" class="submitButtons"/>
+                </div>
+            </form>
+            </div>
+        </div>
+        <br/>
+        <br/>
+                    
+        <!--This form is for searching -->
+        <div id="searchModal" class="modal" >
+            <div class="searchDiv">
+                <span class="searchClose">x</span>
+                <div class="searchTitle">
+                    <p><b>Search/Edit</b></p>
+                </div>
+                <form id="searchForm" action="index.php" method="post">
+                    <br/>
+                    <br/>
+                    <div class="buttons3">
+                        <input type="submit" value="Submit" name="search" id="submitButton" class="submitButtons"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script language='php' src="php/script.php"></script>
+    </body>
+</html>
